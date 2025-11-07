@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-    <!-- 上半部分：带有背景图的文本区域 -->
+    <!-- 顶部文本区域 - 添加背景图片 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,13 +16,13 @@
         android:background="@drawable/img_main_banner"
         android:padding="32dp">
 
-        <!-- 半透明背景层，确保文字可读性 -->
+        <!-- 半透明背景层，确保文字在背景图上清晰可读 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="#80000000"
+            android:background="#CC000000"
             android:padding="24dp"
             android:layout_margin="16dp">
 
@@ -33,7 +33,8 @@
                 android:text="Welcome to"
                 android:textSize="28sp"
                 android:textColor="@android:color/white"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <!-- CampusLife - Your -->
             <TextView
@@ -41,10 +42,10 @@
                 android:layout_height="wrap_content"
                 android:text="CampusLife - Your"
                 android:textSize="28sp"
-                android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:textStyle="bold" />
 
             <!-- Pocket Guide to -->
             <TextView
@@ -54,7 +55,8 @@
                 android:textSize="28sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:textStyle="bold" />
 
             <!-- University of Waikato -->
             <TextView
@@ -62,23 +64,23 @@
                 android:layout_height="wrap_content"
                 android:text="University of Waikato"
                 android:textSize="28sp"
-                android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <!-- 下半部分：绿色背景的按钮区域 -->
+    <!-- 底部按钮网格区域 - 白色背景 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#1B5E20"
+        android:background="@android:color/white"
         android:padding="24dp">
 
         <!-- 第一行按钮 -->
@@ -112,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:text="Facilities"
                     android:textSize="18sp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
 
@@ -141,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:text="Events"
                     android:textSize="18sp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
 
@@ -180,7 +182,7 @@
                     android:layout_height="wrap_content"
                     android:text="Clubs"
                     android:textSize="18sp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
 
@@ -209,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:text="Support"
                     android:textSize="18sp"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
 
