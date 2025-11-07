@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 上三分之一：图片背景区域 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/img_main_banner">
+
+        <!-- 半透明遮罩层 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000" />
+
+        <!-- 左侧：事件图标 -->
+        <ImageView
+            android:id="@+id/eventIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/img_btn_facilities"
+            android:scaleType="centerInside"
+            android:contentDescription="Event Icon" />
+
+        <!-- 右侧：事件名称 -->
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/eventIcon"
+            android:layout_marginStart="24dp"
+            android:text="Event Title"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <!-- 下三分之二：详细内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the detailed content area. Here you will find comprehensive information about the selected campus service. The content will provide users with all the necessary details they need to know.\n\nAdditional information can be included here to give a complete overview of the service, including features, benefits, and how to access it."
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp" />
+
+    </ScrollView>
+
+</LinearLayout>
