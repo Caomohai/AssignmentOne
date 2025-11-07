@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         // 初始化视图
         initViews();
 
-        // 设置内容 - 使用Intent传递的数据
+        // 设置内容 - 使用arrays.xml数据
         setupContent();
     }
 
@@ -33,36 +33,28 @@ public class DetailActivity extends AppCompatActivity {
         // Part G: 从Intent获取唯一标识符
         int topicIndex = getIntent().getIntExtra("TOPIC_INDEX", 0);
 
-        // 根据标识符显示不同内容
-        switch (topicIndex) {
-            case 0: // Facilities
-                eventIcon.setImageResource(R.drawable.img_btn_facilities);
-                eventTitle.setText("Facilities");
-                contentTextView.setText("Discover our state-of-the-art campus facilities including libraries, sports centers, study spaces, and more.");
-                break;
-            case 1: // Events
-                eventIcon.setImageResource(R.drawable.img_btn_events);
-                eventTitle.setText("Events");
-                contentTextView.setText("Stay updated with upcoming university events including academic conferences, cultural festivals, and social gatherings.");
-                break;
-            case 2: // Clubs
-                eventIcon.setImageResource(R.drawable.img_btn_clubs);
-                eventTitle.setText("Clubs");
-                contentTextView.setText("Explore diverse student clubs and societies. From academic groups to cultural organizations and sports teams.");
-                break;
-            case 3: // Support
-                eventIcon.setImageResource(R.drawable.img_btn_support);
-                eventTitle.setText("Support");
-                contentTextView.setText("Access comprehensive student support services including academic counseling, health services, and career guidance.");
-                break;
-            default:
-                setDefaultContent();
-        }
+        // Part H: 从arrays.xml获取数据 - 使用正确的数组名称
+        String[] titles = getResources().getStringArray(R.array.string_array_titles);
+        String[] contents = getResources().getStringArray(R.array.string_array_content);
+        String[] imageNames = getResources().getStringArray(R.array.string_array_images);
+
+        // 直接使用数组索引设置内容（不使用if/switch）
+        eventTitle.setText(titles[topicIndex]);
+        contentTextView.setText(contents[topicIndex]);
+
+        // 设置图片
+        setImageResource(imageNames[topicIndex]);
     }
 
-    private void setDefaultContent() {
-        eventIcon.setImageResource(R.drawable.img_btn_facilities);
-        eventTitle.setText("CampusLife");
-        contentTextView.setText("Welcome to CampusLife. Select a category to view detailed information.");
+    private void setImageResource(String imageName) {
+        // 根据图片名称获取资源ID - 注意去除可能的空格
+        String cleanImageName = imageName.trim();
+        int resourceId = getResources().getIdentifier(cleanImageName, "drawable", getPackageName());
+        if (resourceId != 0) {
+            eventIcon.setImageResource(resourceId);
+        } else {
+            // 如果图片不存在，使用默认图片
+            eventIcon.setImageResource(R.drawable.img_btn_facilities);
+        }
     }
 }
