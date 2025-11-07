@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         // 初始化视图
         initViews();
 
-        // 设置内容
+        // 设置内容 - 使用Intent传递的数据
         setupContent();
     }
 
@@ -30,30 +30,30 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void setupContent() {
-        // 获取传递的主题索引
+        // Part G: 从Intent获取唯一标识符
         int topicIndex = getIntent().getIntExtra("TOPIC_INDEX", 0);
 
-        // 根据索引设置不同的内容
+        // 根据标识符显示不同内容
         switch (topicIndex) {
             case 0: // Facilities
                 eventIcon.setImageResource(R.drawable.img_btn_facilities);
                 eventTitle.setText("Facilities");
-                contentTextView.setText("Discover our state-of-the-art campus facilities including libraries, sports centers, study spaces, and more. All facilities are designed to support your academic success and enhance your university experience.");
+                contentTextView.setText("Discover our state-of-the-art campus facilities including libraries, sports centers, study spaces, and more.");
                 break;
             case 1: // Events
                 eventIcon.setImageResource(R.drawable.img_btn_events);
                 eventTitle.setText("Events");
-                contentTextView.setText("Stay updated with upcoming university events including academic conferences, cultural festivals, sports competitions, and social gatherings. Don't miss out on opportunities to connect and learn.");
+                contentTextView.setText("Stay updated with upcoming university events including academic conferences, cultural festivals, and social gatherings.");
                 break;
             case 2: // Clubs
                 eventIcon.setImageResource(R.drawable.img_btn_clubs);
                 eventTitle.setText("Clubs");
-                contentTextView.setText("Explore diverse student clubs and societies. From academic groups to cultural organizations and sports teams, find your community and get involved in campus life. Joining clubs is a great way to meet new people.");
+                contentTextView.setText("Explore diverse student clubs and societies. From academic groups to cultural organizations and sports teams.");
                 break;
             case 3: // Support
                 eventIcon.setImageResource(R.drawable.img_btn_support);
                 eventTitle.setText("Support");
-                contentTextView.setText("Access comprehensive student support services including academic counseling, health services, career guidance, and wellness resources. We're here to help you succeed in your academic journey.");
+                contentTextView.setText("Access comprehensive student support services including academic counseling, health services, and career guidance.");
                 break;
             default:
                 setDefaultContent();
@@ -63,6 +63,6 @@ public class DetailActivity extends AppCompatActivity {
     private void setDefaultContent() {
         eventIcon.setImageResource(R.drawable.img_btn_facilities);
         eventTitle.setText("CampusLife");
-        contentTextView.setText("Welcome to CampusLife. Select a category to view detailed information about campus services and activities.");
+        contentTextView.setText("Welcome to CampusLife. Select a category to view detailed information.");
     }
 }

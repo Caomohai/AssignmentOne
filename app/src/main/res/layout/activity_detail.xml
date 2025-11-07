@@ -55,7 +55,7 @@
             android:id="@+id/contentTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="This is the detailed content area. Here you will find comprehensive information about the selected campus service. The content will provide users with all the necessary details they need to know.\n\nAdditional information can be included here to give a complete overview of the service, including features, benefits, and how to access it."
+            android:text="Detailed content will be displayed here."
             android:textSize="16sp"
             android:textColor="@android:color/black"
             android:lineSpacingExtra="4dp" />
