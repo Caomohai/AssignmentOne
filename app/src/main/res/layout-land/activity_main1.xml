@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:background="@android:color/white">
 
-    <!-- 上部文本区域 - 添加背景图片 -->
+    <!-- 左侧文本区域 - 添加背景图片 -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
         android:gravity="center"
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome to"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:textStyle="bold" />
@@ -41,10 +41,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CampusLife - Your"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="4dp"
                 android:textStyle="bold" />
 
             <!-- Pocket Guide to -->
@@ -52,10 +52,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pocket Guide to"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="4dp"
                 android:textStyle="bold" />
 
             <!-- University of Waikato -->
@@ -63,39 +63,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="University of Waikato"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="4dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <!-- 下部按钮区域 - 绿色背景，1×4水平排列 -->
+    <!-- 右侧按钮区域 - 绿色背景，1×4水平排列 -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:gravity="center"
         android:background="#1B5E20"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <!-- Facilities 按钮 -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_margin="8dp">
+            android:layout_margin="4dp">
 
             <ImageButton
                 android:id="@+id/btn_facilities"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/img_btn_facilities"
                 android:scaleType="centerCrop"
                 android:background="@drawable/btn_selector"
@@ -105,26 +105,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Facilities"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="2dp" />
 
         </LinearLayout>
 
         <!-- Events 按钮 -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_margin="8dp">
+            android:layout_margin="4dp">
 
             <ImageButton
                 android:id="@+id/btn_events"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/img_btn_events"
                 android:scaleType="centerCrop"
                 android:background="@drawable/btn_selector"
@@ -134,26 +134,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Events"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="2dp" />
 
         </LinearLayout>
 
         <!-- Clubs 按钮 -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_margin="8dp">
+            android:layout_margin="4dp">
 
             <ImageButton
                 android:id="@+id/btn_clubs"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/img_btn_clubs"
                 android:scaleType="centerCrop"
                 android:background="@drawable/btn_selector"
@@ -163,26 +163,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Clubs"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="2dp" />
 
         </LinearLayout>
 
         <!-- Support 按钮 -->
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_margin="8dp">
+            android:layout_margin="4dp">
 
             <ImageButton
                 android:id="@+id/btn_support"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/img_btn_support"
                 android:scaleType="centerCrop"
                 android:background="@drawable/btn_selector"
@@ -192,10 +192,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Support"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="2dp" />
 
         </LinearLayout>
 
